@@ -1,6 +1,9 @@
-<h1 align="center">
-  QEMU
-</h1>
+<p align="center">
+  <img src="assets/readme/logo.jpg" alt="logo" width="500" />
+</p>
+
+
+**Cloud Computing** presentation at _Amirkabir University of Tehran, Iran_.
 
 
 ## What is QEMU?
@@ -29,17 +32,21 @@ by users wishing to have full control over its behaviour and settings. It also a
 
 ## Building QEMU
 
-**QEMU** is multi-platform software intended to be buildable on all modern
-Linux platforms, OS-X, Win32 (via the Mingw64 toolchain) and a variety
-of other UNIX targets. The simple steps to build QEMU are:
+Clone into repository:
 
 ```shell
-mkdir build
-cd build
+git clone https://github.com/amirhnajafiz/QEMU
+```
+
+Go inside ```src``` directory and build **QEMU**.
+
+```shell
+cd src
 ../configure
 make
 ```
 
+## Additional Information
 
 Additional information can also be found online via the QEMU website:
 
