@@ -62,9 +62,108 @@ VM exit:
 
 ### qemu levels
 
+QEMU does the emulation in the following levels:
+
+- Device
+- Memory
+- CPU (our target)
+- Network
+
+<p align="center">
+  <img src="assets/qemu/pc-model-emulation.png" alt="pc-emu" width="700" />
+</p>
+
+#### Question 1
+
+<details>
+
+<summary>
+What is the type of **QEMU** hypervisor? (Type 1 or Type 2)
+</summary>
+
+**QEMU** by itself is a Type-2 hypervisor. It intercepts the instructions meant for Virtual CPU and uses the host operating system to get those instructions executed on the physical CPU.
+When **QEMU** uses **KVM** for hardware acceleration, the combination becomes a Type-1 hypervisor.
+
+</details>
+
 ### qemu main modules
 
+#### Configs
+
+A ```configure``` file will be created after you run the ```run.sh``` script. This file
+contains all of the set up tools that **QEMU** needs. Version control, dependencies, build directories and ...
+
+#### Plugins
+
+In ```plugins``` directory there is a ```plugin.h``` file which contains data of plugins which you can set on
+**QEMU**.
+
+#### Block.c
+
+In ```block.c``` file you can see all of the methods that are used to work with memory or storage.
+
 ### qemu CPU module
+
+In ```cpu.c``` you can see methods and structs in order to emulate CPU. It contians structs like ```VMStateDescription```,
+variables like ```cpu_common_props``` and methods like ```queue_work_on_cpu``` and ```do_run_on_cpu```, ```cpu_exec_start```.
+
+For example, here is a block of code in ```cpus-common.c```:
+
+```c
+/* Wait for exclusive ops to finish, and begin cpu execution.  */
+void cpu_exec_start(CPUState *cpu)
+{
+    /* Write cpu->running before reading pending_cpus.  */
+    smp_mb();
+
+    /* 1. start_exclusive saw cpu->running == true and pending_cpus >= 1.
+     * After taking the lock we'll see cpu->has_waiter == true and run---not
+     * for long because start_exclusive kicked us.  cpu_exec_end will
+     * decrement pending_cpus and signal the waiter.
+     *
+     * 2. start_exclusive saw cpu->running == false but pending_cpus >= 1.
+     * This includes the case when an exclusive item is running now.
+     * Then we'll see cpu->has_waiter == false and wait for the item to
+     * complete.
+     *
+     * 3. pending_cpus == 0.  Then start_exclusive is definitely going to
+     * see cpu->running == true, and it will kick the CPU.
+     */
+    if (unlikely(qatomic_read(&pending_cpus))) {
+        QEMU_LOCK_GUARD(&qemu_cpu_list_lock);
+        if (!cpu->has_waiter) {
+            /* Not counted in pending_cpus, let the exclusive item
+             * run.  Since we have the lock, just set cpu->running to true
+             * while holding it; no need to check pending_cpus again.
+             */
+            qatomic_set(&cpu->running, false);
+            exclusive_idle();
+            /* Now pending_cpus is zero.  */
+            qatomic_set(&cpu->running, true);
+        } else {
+            /* Counted in pending_cpus, go ahead and release the
+             * waiter at cpu_exec_end.
+             */
+        }
+    }
+}
+```
+
+#### Question 2
+
+What will happen if ```cpu_exec_start``` returns nothing?. Like this:
+
+```c
+/* Wait for exclusive ops to finish, and begin cpu execution.  */
+void cpu_exec_start(CPUState *cpu)
+{
+  return
+}
+```
+
+#### Question 3
+
+Why **Emulation**? Can we say it is **Simulation**?
 
 <br />
 
