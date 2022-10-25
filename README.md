@@ -34,6 +34,18 @@ It also aims to facilitate integration into higher level management layers, by p
 <br />
 
 
+## QEMU architecture
+
+
+### QEMU levels
+
+
+### QEMU main modules
+
+
+### QEMU CPU module
+
+
 ## Executing QEMU on your local!
 
 Clone into the presentation repository to access **QEMU** source codes:
@@ -54,6 +66,16 @@ make
 <br />
 
 
+## QEMU vs VirtualBox
+
+As discussed earlier, **QEMU** can be used for emulation and virtualization, however, **VirtualBox** can be used for virtualization only. QEMU comes with dual support of emulation and virtualization whereas the latter provides only virtualization features.
+
+**QEMU/KVM** is better integrated in Linux, has a smaller footprint and should therefore be faster. **VirtualBox** is a virtualization software limited to x86 and amd64 architecture. Xen uses **QEMU** for the hardware assisted virtualization, but can also paravirtualize guests without hardware virtualisation
+
+
+<br />
+
+
 ## Additional Information
 
 Additional information can also be found online via the QEMU website:
@@ -61,3 +83,13 @@ Additional information can also be found online via the QEMU website:
 - [QEMU on Linux](https://www.qemu.org/download/#linux)
 - [QEMU on Windows](https://www.qemu.org/download/#windows)
 - [QEMU on MacOS](https://www.qemu.org/download/#macos)
+
+
+<br />
+
+
+## Presentation Resources
+
+- [Virtualbox vs QEMU](https://linuxhint.com/qemu-vs-virtualbox/#:~:text=Key%20Differences%20between%20QEMU%20and,latter%20provides%20only%20virtualization%20features.)
+- [QEMU website](https://www.qemu.org/)
+- [GiantVM](https://github.com/GiantVM/QEMU)
