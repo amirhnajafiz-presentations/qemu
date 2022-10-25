@@ -1,23 +1,22 @@
-         QEMU README
-         ===========
+<h1 align="center">
+  QEMU
+</h1>
 
-QEMU is a generic and open source machine & userspace emulator and
-virtualizer.
+## What is QEMU?
 
-QEMU is capable of emulating a complete machine in software without any
-need for hardware virtualization support. By using dynamic translation,
-it achieves very good performance. QEMU can also integrate with the Xen
-and KVM hypervisors to provide emulated hardware while allowing the
-hypervisor to manage the CPU. With hypervisor support, QEMU can achieve
-near native performance for CPUs. When QEMU emulates CPUs directly it is
-capable of running operating systems made for one machine (e.g. an ARMv7
+**QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
+
+**QEMU** is capable of _emulating_ a complete machine in software without any
+need for hardware virtualization support. 
+
+By using dynamic translation, it achieves very good performance. 
+**QEMU** can also integrate with the Xen and KVM hypervisors to provide emulated hardware while allowing the
+hypervisor to manage the CPU. With hypervisor support, **QEMU** can achieve near native performance for CPUs. 
+
+When **QEMU** emulates CPUs directly it is capable of running operating systems made for one machine (e.g. an ARMv7
 board) on a different machine (e.g. an x86_64 PC board).
 
-QEMU is also capable of providing userspace API virtualization for Linux
-and BSD kernel interfaces. This allows binaries compiled against one
-architecture ABI (e.g. the Linux PPC64 ABI) to be run on a host using a
-different architecture ABI (e.g. the Linux x86_64 ABI). This does not
-involve any hardware emulation, simply CPU and syscall emulation.
+## Why QEMU?
 
 QEMU aims to fit into a variety of use cases. It can be invoked directly
 by users wishing to have full control over its behaviour and settings.
@@ -26,12 +25,8 @@ layers, by providing a stable command line interface and monitor API.
 It is commonly invoked indirectly via the libvirt library when using
 open source applications such as oVirt, OpenStack and virt-manager.
 
-QEMU as a whole is released under the GNU General Public License,
-version 2. For full licensing details, consult the LICENSE file.
 
-
-Building
-========
+## Building QEMU
 
 QEMU is multi-platform software intended to be buildable on all modern
 Linux platforms, OS-X, Win32 (via the Mingw64 toolchain) and a variety
