@@ -151,6 +151,10 @@ void cpu_exec_start(CPUState *cpu)
 
 #### Question 2
 
+<details>
+
+<summary>
+
 What will happen if ```cpu_exec_start``` returns nothing?. Like this:
 
 ```c
@@ -161,9 +165,25 @@ void cpu_exec_start(CPUState *cpu)
 }
 ```
 
+</summary>
+
+It's like creating process in your system, but you never allow it to access CPU (it's always in ready state).
+
+</details>
+
 #### Question 3
 
+<details>
+
+<summary>
+
 Why **Emulation**? Can we say it is **Simulation**?
+
+</summary>
+
+A simulator can perform tasks in abstract to demonstrate the behavior of a thing and its components, while an emulator can copy the behavior of that thing to functionally replace it.
+
+</details>
 
 <br />
 
@@ -181,6 +201,13 @@ Go inside ```src``` directory and build **QEMU** by running the following comman
 cd src
 ../configure
 make
+```
+
+Or run the following commands (execute ```run.sh```):
+
+```shell
+chmod +x ./run.sh
+./run.sh
 ```
 
 <br />
