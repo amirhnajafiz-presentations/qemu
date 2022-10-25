@@ -6,45 +6,53 @@
 **Cloud Computing** presentation at _Amirkabir University of Tehran, Iran_.
 
 
+<br />
+
+
 ## What is QEMU?
 
-**QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
-
-**QEMU** is capable of _emulating_ a complete machine in software without any
+**QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_. 
+It is capable of _emulating_ a complete machine in software without any
 need for hardware virtualization support. 
 
-By using dynamic translation, it achieves very good performance. 
-**QEMU** can also integrate with the Xen and KVM hypervisors to provide emulated hardware while allowing the
-hypervisor to manage the CPU. With hypervisor support, **QEMU** can achieve near native performance for CPUs. 
+By using dynamic translation, it achieves very good performance. It can also integrate with 
+the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU. 
+With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
-When **QEMU** emulates CPUs directly it is capable of running operating systems made for one machine (e.g. an ARMv7
-board) on a different machine (e.g. an x86_64 PC board).
+
+<br />
 
 
 ## Why QEMU?
 
 **QEMU** emulates the machine's processor through dynamic binary translation and provides a set of
 different hardware and device models for the machine, enabling it to run a variety of guest operating systems.
+It aims to fit into a variety of use cases. It can be invoked directly by users wishing to have full control over its behaviour and settings. 
+It also aims to facilitate integration into higher level management layers, by providing a stable command line interface and monitor API.
 
-**QEMU** aims to fit into a variety of use cases. It can be invoked directly
-by users wishing to have full control over its behaviour and settings. It also aims to facilitate integration into higher level management layers, by providing a stable command line interface and monitor API.
+
+<br />
 
 
-## Building QEMU
+## Executing QEMU on your local!
 
-Clone into repository:
+Clone into the presentation repository to access **QEMU** source codes:
 
 ```shell
 git clone https://github.com/amirhnajafiz/QEMU
 ```
 
-Go inside ```src``` directory and build **QEMU**.
+Go inside ```src``` directory and build **QEMU** by running the following commands:
 
 ```shell
 cd src
 ../configure
 make
 ```
+
+
+<br />
+
 
 ## Additional Information
 
