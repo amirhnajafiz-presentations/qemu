@@ -37,6 +37,24 @@ It also aims to facilitate integration into higher level management layers, by p
 
 ## QEMU architecture
 
+Analysis of QEMU and KVM.
+
+<p align="center">
+  <img src="assets/qemu/kvm-model.png" alt="qemu-arch" width="700" />
+</p>
+
+VM enter:
+
+<p align="center">
+  <img src="assets/qemu/vm-enter.png" alt="kvm-in" width="700" />
+</p>
+
+VM exit:
+
+<p align="center">
+  <img src="assets/qemu/vm-exit.png" alt="kvm-out" width="700" />
+</p>
+
 ### qemu levels
 
 ### qemu main modules
@@ -83,7 +101,8 @@ Additional information can also be found online via the QEMU website:
 
 ## Presentation Resources
 
-- [Virtualbox vs QEMU](https://linuxhint.com/qemu-vs-virtualbox/#:~:text=Key%20Differences%20between%20QEMU%20and,latter%20provides%20only%20virtualization%20features.)
 - [QEMU website](https://www.qemu.org/)
+- [QEMU Architecture](https://wiki.qemu.org/Documentation/Architecture)
 - [GiantVM](https://github.com/GiantVM/QEMU)
 - [How to build QEMU?](https://www.howtogeek.com/devops/how-to-use-qemu-to-boot-another-os/)
+- [Virtualbox vs QEMU](https://linuxhint.com/qemu-vs-virtualbox/#:~:text=Key%20Differences%20between%20QEMU%20and,latter%20provides%20only%20virtualization%20features.)
