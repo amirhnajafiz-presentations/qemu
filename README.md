@@ -8,9 +8,9 @@
   <b>Dr. Seyed Ahmad Javadi</b>
 </p>
 
+___
 
 <br />
-
 
 ## What is QEMU?
 
@@ -22,37 +22,28 @@ By using dynamic translation, it achieves very good performance. It can also int
 the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU. 
 With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
-
 <br />
-
 
 ## Why QEMU?
 
 **QEMU** emulates the machine's processor through dynamic binary translation and provides a set of
 different hardware and device models for the machine, enabling it to run a variety of guest operating systems.
-It aims to fit into a variety of use cases. It can be invoked directly by users wishing to have full control over its behaviour and settings. 
+It aims to fit into a variety of use cases. It can be invoked directly by users wishing to have full control over its behaviour and settings.
 It also aims to facilitate integration into higher level management layers, by providing a stable command line interface and monitor API.
 
-
 <br />
-
 
 ## QEMU architecture
 
-
 ### qemu levels
-
 
 ### qemu main modules
 
-
 ### qemu CPU module
-
 
 <br />
 
-
-## Executing QEMU on your local!
+## Executing QEMU on your local PC
 
 Clone into the presentation repository to access **QEMU** source codes:
 
@@ -68,9 +59,7 @@ cd src
 make
 ```
 
-
 <br />
-
 
 ## QEMU vs VirtualBox
 
@@ -78,9 +67,7 @@ As discussed earlier, **QEMU** can be used for emulation and virtualization, how
 
 **QEMU/KVM** is better integrated in Linux, has a smaller footprint and should therefore be faster. **VirtualBox** is a virtualization software limited to x86 and amd64 architecture. Xen uses **QEMU** for the hardware assisted virtualization, but can also paravirtualize guests without hardware virtualisation
 
-
 <br />
-
 
 ## Additional Information
 
@@ -90,9 +77,7 @@ Additional information can also be found online via the QEMU website:
 - [QEMU on Windows](https://www.qemu.org/download/#windows)
 - [QEMU on MacOS](https://www.qemu.org/download/#macos)
 
-
 <br />
-
 
 ## Presentation Resources
 
