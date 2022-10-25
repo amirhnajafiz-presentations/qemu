@@ -16,12 +16,12 @@ ___
 
 ## What is QEMU?
 
-**QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_. 
+**QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
 It is capable of _emulating_ a complete machine in software without any
-need for hardware virtualization support. 
+need for hardware virtualization support.
 
-By using dynamic translation, it achieves very good performance. It can also integrate with 
-the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU. 
+By using dynamic translation, it achieves very good performance. It can also integrate with
+the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU.
 With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
 <br />
@@ -42,6 +42,11 @@ Analysis of QEMU and KVM.
 <p align="center">
   <img src="assets/qemu/kvm-model.png" alt="qemu-arch" width="700" />
 </p>
+
+### Notes
+
+- KVM: Kernel-based Virtual Machine (KVM) is an open source virtualization technology built into Linux.
+- VMCS: Virtual Machine Control Structure.
 
 VM enter:
 
@@ -102,6 +107,7 @@ Additional information can also be found online via the QEMU website:
 ## Presentation Resources
 
 - [QEMU website](https://www.qemu.org/)
+- [QEMU documents](https://www.qemu.org/docs/master/)
 - [QEMU Architecture](https://wiki.qemu.org/Documentation/Architecture)
 - [GiantVM](https://github.com/GiantVM/QEMU)
 - [How to build QEMU?](https://www.howtogeek.com/devops/how-to-use-qemu-to-boot-another-os/)
