@@ -24,6 +24,18 @@ By using dynamic translation, it achieves very good performance. It can also int
 the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU.
 With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
+### Question 1
+
+<details>
+
+<summary> What is the difference between emulation and virtualization? </summary>
+
+While emulated environments require a software bridge to interact with the hardware,
+virtualization accesses hardware directly. However, despite being the overall faster option,
+virtualization is limited to running software that was already capable of running on the underlying hardware.
+
+</details>
+
 <br />
 
 ## Why QEMU?
@@ -73,15 +85,14 @@ QEMU does the emulation in the following levels:
   <img src="assets/qemu/pc-model-emulation.png" alt="pc-emu" width="700" />
 </p>
 
-#### Question 1
+#### Question 2
 
 <details>
 
-<summary>
-What is the type of **QEMU** hypervisor? (Type 1 or Type 2)
-</summary>
+<summary> What is the type of **QEMU** hypervisor? (Type 1 or Type 2) </summary>
 
-**QEMU** by itself is a Type-2 hypervisor. It intercepts the instructions meant for Virtual CPU and uses the host operating system to get those instructions executed on the physical CPU.
+**QEMU** by itself is a Type-2 hypervisor.
+It intercepts the instructions meant for Virtual CPU and uses the host operating system to get those instructions executed on the physical CPU.
 When **QEMU** uses **KVM** for hardware acceleration, the combination becomes a Type-1 hypervisor.
 
 </details>
@@ -149,13 +160,11 @@ void cpu_exec_start(CPUState *cpu)
 }
 ```
 
-#### Question 2
+#### Question 3
 
 <details>
 
-<summary>
-
-What will happen if ```cpu_exec_start``` returns nothing?. Like this:
+<summary> What will happen if ```cpu_exec_start``` returns nothing?. Like this:
 
 ```c
 /* Wait for exclusive ops to finish, and begin cpu execution.  */
@@ -171,17 +180,16 @@ It's like creating process in your system, but you never allow it to access CPU 
 
 </details>
 
-#### Question 3
+#### Question 4
 
 <details>
 
-<summary>
-
-Why **Emulation**? Can we say it is **Simulation**?
-
-</summary>
+<summary> Why **Emulation**? Can we say it is **Simulation**? </summary>
 
 A simulator can perform tasks in abstract to demonstrate the behavior of a thing and its components, while an emulator can copy the behavior of that thing to functionally replace it.
+
+In a sense, then, you can think of emulators as occupying a middle ground between simulators and real devices. Whereas simulators only mimic environment features that can be configured or defined using software, 
+emulators mimic both hardware and software features.
 
 </details>
 
@@ -212,14 +220,6 @@ chmod +x ./run.sh
 
 <br />
 
-## QEMU vs VirtualBox
-
-As discussed earlier, **QEMU** can be used for emulation and virtualization, however, **VirtualBox** can be used for virtualization only. QEMU comes with dual support of emulation and virtualization whereas the latter provides only virtualization features.
-
-**QEMU/KVM** is better integrated in Linux, has a smaller footprint and should therefore be faster. **VirtualBox** is a virtualization software limited to x86 and amd64 architecture. Xen uses **QEMU** for the hardware assisted virtualization, but can also paravirtualize guests without hardware virtualisation
-
-<br />
-
 ## Additional Information
 
 Additional information can also be found online via the QEMU website:
@@ -237,4 +237,3 @@ Additional information can also be found online via the QEMU website:
 - [QEMU Architecture](https://wiki.qemu.org/Documentation/Architecture)
 - [GiantVM](https://github.com/GiantVM/QEMU)
 - [How to build QEMU?](https://www.howtogeek.com/devops/how-to-use-qemu-to-boot-another-os/)
-- [Virtualbox vs QEMU](https://linuxhint.com/qemu-vs-virtualbox/#:~:text=Key%20Differences%20between%20QEMU%20and,latter%20provides%20only%20virtualization%20features.)
