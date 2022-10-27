@@ -30,6 +30,8 @@ With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
 <summary> What is the difference between emulation and virtualization? </summary>
 
+<br />
+
 While emulated environments require a software bridge to interact with the hardware,
 virtualization accesses hardware directly. However, despite being the overall faster option,
 virtualization is limited to running software that was already capable of running on the underlying hardware.
@@ -89,7 +91,9 @@ QEMU does the emulation in the following levels:
 
 <details>
 
-<summary> What is the type of **QEMU** hypervisor? (Type 1 or Type 2) </summary>
+<summary> What is the type of QEMU hypervisor? (Type 1 or Type 2) </summary>
+
+<br />
 
 **QEMU** by itself is a Type-2 hypervisor.
 It intercepts the instructions meant for Virtual CPU and uses the host operating system to get those instructions executed on the physical CPU.
@@ -164,7 +168,9 @@ void cpu_exec_start(CPUState *cpu)
 
 <details>
 
-<summary> What will happen if ```cpu_exec_start``` returns nothing?. Like this:
+<summary> What will happen if cpu_exec_start returns nothing?. Like this:
+
+<br />
 
 ```c
 /* Wait for exclusive ops to finish, and begin cpu execution.  */
@@ -176,6 +182,8 @@ void cpu_exec_start(CPUState *cpu)
 
 </summary>
 
+<br />
+
 It's like creating process in your system, but you never allow it to access CPU (it's always in ready state).
 
 </details>
@@ -184,7 +192,9 @@ It's like creating process in your system, but you never allow it to access CPU 
 
 <details>
 
-<summary> Why **Emulation**? Can we say it is **Simulation**? </summary>
+<summary> Why Emulation? Can we say it is Simulation? </summary>
+
+<br />
 
 A simulator can perform tasks in abstract to demonstrate the behavior of a thing and its components, while an emulator can copy the behavior of that thing to functionally replace it.
 
