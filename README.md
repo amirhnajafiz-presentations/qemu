@@ -230,6 +230,12 @@ chmod +x ./run.sh
 
 <br />
 
+## CPU Plugged test
+
+Let's go into [manual file](./Manual.md).
+
+<br />
+
 ## Additional Information
 
 Additional information can also be found online via the QEMU website:
