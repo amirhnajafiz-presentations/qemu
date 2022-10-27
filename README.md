@@ -34,9 +34,10 @@ With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
 <pre>
 
-While emulated environments require a software bridge to interact with the hardware,
-virtualization accesses hardware directly. However, despite being the overall faster option,
-virtualization is limited to running software that was already capable of running on the underlying hardware.
+While emulated environments require a software bridge to interact with
+the hardware, virtualization accesses hardware directly.
+However, despite being the overall faster option, virtualization is limited to
+running software that was already capable of running on the underlying hardware.
 
 </pre>
 
@@ -50,6 +51,10 @@ virtualization is limited to running software that was already capable of runnin
 different hardware and device models for the machine, enabling it to run a variety of guest operating systems.
 It aims to fit into a variety of use cases. It can be invoked directly by users wishing to have full control over its behaviour and settings.
 It also aims to facilitate integration into higher level management layers, by providing a stable command line interface and monitor API.
+
+<br />
+
+___
 
 <br />
 
@@ -102,8 +107,10 @@ QEMU does the emulation in the following levels:
 <pre>
 
 QEMU by itself is a Type-2 hypervisor.
-It intercepts the instructions meant for Virtual CPU and uses the host operating system to get those instructions executed on the physical CPU.
-When QEMU uses KVM for hardware acceleration, the combination becomes a Type-1 hypervisor.
+It intercepts the instructions meant for Virtual CPU and uses the
+host operating system to get those instructions executed on the physical CPU.
+When QEMU uses KVM for hardware acceleration,
+the combination becomes a Type-1 hypervisor.
 
 </pre>
 
@@ -111,19 +118,27 @@ When QEMU uses KVM for hardware acceleration, the combination becomes a Type-1 h
 
 ### qemu main modules
 
+___
+
 #### Configs
 
 A ```configure``` file will be created after you run the ```run.sh``` script. This file
 contains all of the set up tools that **QEMU** needs. Version control, dependencies, build directories and ...
+
+___
 
 #### Plugins
 
 In ```plugins``` directory there is a ```plugin.h``` file which contains data of plugins which you can set on
 **QEMU**.
 
+___
+
 #### Block.c
 
 In ```block.c``` file you can see all of the methods that are used to work with memory or storage.
+
+___
 
 ### qemu CPU module
 
@@ -176,9 +191,9 @@ void cpu_exec_start(CPUState *cpu)
 
 <details>
 
-<summary> What will happen if cpu_exec_start returns nothing?. Like this:
+<summary> What will happen if cpu_exec_start returns nothing? Like this:
 
-<br />
+<br /><br />
 
 ```c
 /* Wait for exclusive ops to finish, and begin cpu execution.  */
@@ -194,7 +209,8 @@ void cpu_exec_start(CPUState *cpu)
 
 <pre>
 
-It's like creating process in your system, but you never allow it to access CPU (it's always in ready state).
+It's like creating process in your system, but you never 
+allow it to access CPU (it's always in ready state).
 
 </pre>
 
@@ -210,14 +226,23 @@ It's like creating process in your system, but you never allow it to access CPU 
 
 <pre>
 
-A simulator can perform tasks in abstract to demonstrate the behavior of a thing and its components, while an emulator can copy the behavior of that thing to functionally replace it.
+A simulator can perform tasks in abstract to demonstrate the behavior
+of a thing and its components, while an emulator can copy
+the behavior of that thing to functionally replace it.
 
-In a sense, then, you can think of emulators as occupying a middle ground between simulators and real devices. Whereas simulators only mimic environment features that can be configured or defined using software,
+In a sense, then, you can think of emulators as occupying a
+middle ground between simulators and real devices.
+Whereas simulators only mimic environment features that can be
+configured or defined using software,
 emulators mimic both hardware and software features.
 
 </pre>
 
 </details>
+
+<br />
+
+___
 
 <br />
 
@@ -249,6 +274,10 @@ chmod +x ./run.sh
 ## CPU Plugged test
 
 Let's go into [manual file](./Manual.md).
+
+<br />
+
+___
 
 <br />
 
