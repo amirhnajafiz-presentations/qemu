@@ -209,7 +209,7 @@ void cpu_exec_start(CPUState *cpu)
 
 <pre>
 
-It's like creating process in your system, but you never 
+It's like creating process in your system, but you never
 allow it to access CPU (it's always in ready state).
 
 </pre>

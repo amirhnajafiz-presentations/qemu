@@ -13,14 +13,30 @@ query-hotpluggable-cpus
 ```
 
 The query-hotpluggable-cpus command returns an object for CPUs that are present
-(containing a ```qom-path``` member) or which may be hot-plugged (no ```qom-path``` member).
+(containing a ```qom-path``` member).
 
-From its output in step (3), we can see that IvyBridge-IBRS-x86_64-cpu is present in socket 0,
+## Adding a new vCPU
+
+From its output, we can see that **IvyBridge-IBRS-x86_64-cpu** is present in socket 1,
 while hot-plugging a CPU into socket 1 requires passing the listed properties to QMP device_add:
 
 ```shell
 device_add id=cpu-2 driver=IvyBridge-IBRS-x86_64-cpu socket-id=0 core-id=1 thread-id=0
 ```
+
+### Question 1
+
+<details>
+
+<summary> What is driver in this command? </summary>
+
+<br />
+
+You tell me!
+
+</details>
+
+<br />
 
 Optionally, run QMP query-cpus-fast for some details about the vCPUs:
 
