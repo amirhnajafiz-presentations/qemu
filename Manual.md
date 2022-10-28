@@ -19,7 +19,7 @@ From its output in step (3), we can see that IvyBridge-IBRS-x86_64-cpu is presen
 while hot-plugging a CPU into socket 1 requires passing the listed properties to QMP device_add:
 
 ```shell
-device_add id=cpu-2 driver=IvyBridge-IBRS-x86_64-cpu socket-id=1 core-id=0 thread-id=0
+device_add id=cpu-2 driver=IvyBridge-IBRS-x86_64-cpu socket-id=0 core-id=1 thread-id=0
 ```
 
 Optionally, run QMP query-cpus-fast for some details about the vCPUs:
