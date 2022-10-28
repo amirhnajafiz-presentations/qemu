@@ -9,9 +9,6 @@
 </p>
 
 <br />
-
-___
-
 <br />
 
 ## What is QEMU?
@@ -53,9 +50,6 @@ It aims to fit into a variety of use cases. It can be invoked directly by users 
 It also aims to facilitate integration into higher level management layers, by providing a stable command line interface and monitor API.
 
 <br />
-
-___
-
 <br />
 
 ## QEMU architecture
@@ -118,27 +112,27 @@ the combination becomes a Type-1 hypervisor.
 
 ### qemu main modules
 
-___
+<br />
 
 #### Configs
 
 A ```configure``` file will be created after you run the ```run.sh``` script. This file
 contains all of the set up tools that **QEMU** needs. Version control, dependencies, build directories and ...
 
-___
+<br />
 
 #### Plugins
 
 In ```plugins``` directory there is a ```plugin.h``` file which contains data of plugins which you can set on
 **QEMU**.
 
-___
+<br />
 
 #### Block.c
 
 In ```block.c``` file you can see all of the methods that are used to work with memory or storage.
 
-___
+<br />
 
 ### qemu CPU module
 
@@ -195,7 +189,7 @@ void cpu_exec_start(CPUState *cpu)
 
 <summary> What will happen if cpu_exec_start returns nothing? Like this:
 
-<br /><br />
+<br />
 
 ```c
 /* Wait for exclusive ops to finish, and begin cpu execution.  */
@@ -245,9 +239,6 @@ emulators mimic both hardware and software features.
 </details>
 
 <br />
-
-___
-
 <br />
 
 ## Executing QEMU on your local PC
