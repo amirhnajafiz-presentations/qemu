@@ -1,4 +1,5 @@
 #!/opt/homebrew/bin/lua
+
 -- Path: build.lua
 -- Build script building QEMU
 
