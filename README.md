@@ -187,6 +187,8 @@ void cpu_exec_start(CPUState *cpu)
 }
 ```
 
+<br />
+
 #### Question 3
 
 <details>
@@ -215,6 +217,8 @@ allow it to access CPU (it's always in ready state).
 </pre>
 
 </details>
+
+<br />
 
 #### Question 4
 
