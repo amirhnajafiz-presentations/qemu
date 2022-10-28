@@ -1,5 +1,12 @@
 #!/opt/homebrew/bin/lua
 
+package.path = package.path .. ';local/share/lua/5.3/?.lua'
+inifile = require('inifile')
+
+-- parse the INI file and
+-- put values into a table called conf
+conf = inifile.parse('config.toml')
+
 -- Clone into github repository for downloading source code into 
 -- src directory.
 
