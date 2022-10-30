@@ -9,7 +9,6 @@
 </p>
 
 <br />
-<br />
 
 ## What is QEMU?
 
@@ -21,6 +20,8 @@ By using dynamic translation, it achieves very good performance. It can also int
 the Xen and KVM hypervisors to provide emulated hardware while allowing the hypervisor to manage the CPU.
 With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
+<br />
+
 ### Question 1
 
 <details>
@@ -30,12 +31,10 @@ With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 <br />
 
 <pre>
-
 While emulated environments require a software bridge to interact with
 the hardware, virtualization accesses hardware directly.
 However, despite being the overall faster option, virtualization is limited to
 running software that was already capable of running on the underlying hardware.
-
 </pre>
 
 </details>
@@ -65,19 +64,9 @@ Analysis of QEMU and KVM.
 - KVM: Kernel-based Virtual Machine (KVM) is an open source virtualization technology built into Linux.
 - VMCS: Virtual Machine Control Structure.
 
-VM enter:
+<br />
 
-<p align="center">
-  <img src="assets/qemu/vm-enter.png" alt="kvm-in" width="700" />
-</p>
-
-VM exit:
-
-<p align="center">
-  <img src="assets/qemu/vm-exit.png" alt="kvm-out" width="700" />
-</p>
-
-### qemu levels
+### QEMU levels
 
 QEMU does the emulation in the following levels:
 
@@ -90,6 +79,8 @@ QEMU does the emulation in the following levels:
   <img src="assets/qemu/pc-model-emulation.png" alt="pc-emu" width="700" />
 </p>
 
+<br />
+
 #### Question 2
 
 <details>
@@ -99,20 +90,18 @@ QEMU does the emulation in the following levels:
 <br />
 
 <pre>
-
 QEMU by itself is a Type-2 hypervisor.
 It intercepts the instructions meant for Virtual CPU and uses the
 host operating system to get those instructions executed on the physical CPU.
 When QEMU uses KVM for hardware acceleration,
 the combination becomes a Type-1 hypervisor.
-
 </pre>
 
 </details>
 
-### qemu main modules
-
 <br />
+
+### QEMU main modules
 
 #### Configs
 
@@ -134,7 +123,7 @@ In ```block.c``` file you can see all of the methods that are used to work with 
 
 <br />
 
-### qemu CPU module
+### QEMU CPU module
 
 In ```cpu.c``` you can see methods and structs in order to emulate CPU. It contians structs like ```VMStateDescription```,
 variables like ```cpu_common_props``` and methods like ```queue_work_on_cpu``` and ```do_run_on_cpu```, ```cpu_exec_start```.
@@ -204,10 +193,8 @@ void cpu_exec_start(CPUState *cpu)
 <br />
 
 <pre>
-
 It's like creating process in your system, but you never
 allow it to access CPU (it's always in ready state).
-
 </pre>
 
 </details>
@@ -223,7 +210,6 @@ allow it to access CPU (it's always in ready state).
 <br />
 
 <pre>
-
 A simulator can perform tasks in abstract to demonstrate the behavior
 of a thing and its components, while an emulator can copy
 the behavior of that thing to functionally replace it.
@@ -233,7 +219,6 @@ middle ground between simulators and real devices.
 Whereas simulators only mimic environment features that can be
 configured or defined using software,
 emulators mimic both hardware and software features.
-
 </pre>
 
 </details>
@@ -269,10 +254,6 @@ chmod +x ./run.sh
 ## CPU Plugged test
 
 Let's go into [manual file](./Manual.md).
-
-<br />
-
-___
 
 <br />
 
