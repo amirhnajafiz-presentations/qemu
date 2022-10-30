@@ -1,5 +1,6 @@
 #!/opt/homebrew/bin/lua
 
+-- importing inifile library
 inifile = require "inifile"
 
 -- parse the INI file and
