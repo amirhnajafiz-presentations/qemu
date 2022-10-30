@@ -32,7 +32,10 @@ device_add id=cpu-2 driver=IvyBridge-IBRS-x86_64-cpu socket-id=0 core-id=1 threa
 
 <br />
 
-You tell me!
+<pre>
+Cpu model type name.
+In here it is IvyBridge-IBRS-x86_64-cpu.
+</pre>
 
 </details>
 
