@@ -1,8 +1,8 @@
 # Manual
 
-Run ```qmp-shell``` (located in the source tree, under: /scripts/qmp/) to connect to the just-launched QEMU:
+Run ```qmp-shell``` (located in the source tree, under ‍‍‍‍```/scripts/qmp/```) to connect to the just-launched **QEMU**:
 
-```shell
+```shell‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
 ./qmp-shell -p -v /tmp/qmp-sock
 ```
 
@@ -12,7 +12,7 @@ Find out which CPU types could be plugged, and into which sockets:
 query-hotpluggable-cpus
 ```
 
-The query-hotpluggable-cpus command returns an object for CPUs that are present
+The ```query-hotpluggable-cpus``` command returns an object for CPUs that are present
 (containing a ```qom-path``` member).
 
 ## Adding a new vCPU
@@ -38,13 +38,15 @@ You tell me!
 
 <br />
 
-Optionally, run QMP query-cpus-fast for some details about the vCPUs:
+Optionally, run QMP ```query-cpus-fast``` for some details about the vCPUs:
 
 ```shell
 query-cpus-fast
 ```
 
-From the ```qmp-shell```, invoke the QMP device_del command:
+### Removing vCPU
+
+From the ```qmp-shell```, invoke the QMP ```device_del``` command:
 
 ```shell
 device_del id=cpu-2
