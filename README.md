@@ -113,9 +113,9 @@ In ```plugins``` directory there is a ```plugin.h``` file which contains data of
 
 <br />
 
-#### Block.c
-
-In ```block.c``` file you can see all of the methods that are used to work with memory or storage.
+<p align="center">
+  <img src="assets/qemu/code-arch.jpeg" alt="qemu-code" width="500" />
+</p>
 
 <br />
 
