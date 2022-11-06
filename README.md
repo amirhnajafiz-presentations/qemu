@@ -56,7 +56,7 @@ It also aims to facilitate integration into higher level management layers, by p
 Analysis of QEMU and KVM.
 
 <p align="center">
-  <img src="assets/qemu/kvm-model.png" alt="qemu-arch" width="700" />
+  <img src="assets/qemu/qemu-arch.jpg" alt="qemu-arch" width="500" />
 </p>
 
 ### Notes
