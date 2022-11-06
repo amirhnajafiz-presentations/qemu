@@ -62,7 +62,27 @@ Analysis of QEMU and KVM.
 ### Notes
 
 - KVM: Kernel-based Virtual Machine (KVM) is an open source virtualization technology built into Linux.
-- VMCS: Virtual Machine Control Structure.
+
+#### Quick Question
+
+<details>
+
+<summary> What are the Rings? </summary>
+
+<pre>
+Computers are often running multiple software processes at once,
+and these will require differing levels of access to resources and hardware.
+Operating systems can be broken down into a number of discrete layers,
+each with its own privileges.
+This system is known as a protection ring.
+
+Code executing in ring 0 is said to be running in system space,
+kernel mode or supervisor mode.
+All other code such as applications running on the operating system
+operates in less privileged rings, typically ring 3.
+</pre>
+
+</details>
 
 <br />
 
