@@ -69,6 +69,8 @@ Analysis of QEMU and KVM.
 
 <summary> What are the Rings? </summary>
 
+<br />
+
 <pre>
 Computers are often running multiple software processes at once,
 and these will require differing levels of access to resources and hardware.
