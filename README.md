@@ -75,10 +75,6 @@ QEMU does the emulation in the following levels:
 - CPU (our target)
 - Network
 
-<p align="center">
-  <img src="assets/qemu/pc-model-emulation.png" alt="pc-emu" width="700" />
-</p>
-
 <br />
 
 #### Question 2
@@ -259,13 +255,18 @@ Let's go into [manual file](./Manual.md).
 
 ## Additional Information
 
-Additional information can also be found online via the QEMU website:
+Additional information can also be found online via the **QEMU** website:
 
 - [QEMU on Linux](https://www.qemu.org/download/#linux)
 - [QEMU on Windows](https://www.qemu.org/download/#windows)
 - [QEMU on MacOS](https://www.qemu.org/download/#macos)
 
 <br />
+
+Some useful reports that I found for **QEMU**:
+
+- [QEMU Static Analysis](https://www.researchgate.net/publication/257749022_QEMUCPC_static_analysis_and_CPS_conversion_for_safe_portable_and_efficient_coroutines)
+- [QEMU Source Code Analysis](https://stackoverflow.com/questions/15485257/qemu-source-code-flow)
 
 ## Presentation Resources
 
@@ -274,3 +275,4 @@ Additional information can also be found online via the QEMU website:
 - [QEMU Architecture](https://wiki.qemu.org/Documentation/Architecture)
 - [GiantVM](https://github.com/GiantVM/QEMU)
 - [How to build QEMU?](https://www.howtogeek.com/devops/how-to-use-qemu-to-boot-another-os/)
+- [QEMU code call](https://stackoverflow.com/questions/20675226/qemu-code-flow-instruction-cache-and-tcg/21000294#21000294)
