@@ -5,7 +5,6 @@
 <p align="center">
   <b>Cloud Computing</b> presentation at <i>Amirkabir University of Tehran, Iran</i><br />
   Cloud Computing Course Fall 2022-23<br />
-  <b>Dr. Seyed Ahmad Javadi</b>
 </p>
 
 <br />
