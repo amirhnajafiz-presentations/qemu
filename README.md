@@ -21,6 +21,24 @@ With hypervisor support, **QEMU** can achieve near native performance for CPUs.
 
 <br />
 
+### Question 0
+
+<details>
+
+<summary>Why do we need Virtualization?</summary>
+  
+<br />
+  
+<pre>
+Virtualization allows an organization to create multiple virtual machines—each with
+their own operating system (OS) and applications—on a single physical machine. 
+A virtual machine can't interact directly with a physical computer, however.
+</pre>
+  
+</details>
+
+<br />
+
 ### Question 1
 
 <details>
