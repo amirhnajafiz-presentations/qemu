@@ -1,14 +1,3 @@
-<p align="center">
-  <img src="assets/readme/logo.jpg" alt="logo" width="500" />
-</p>
-
-<p align="center">
-  <b>Cloud Computing</b> presentation at <i>Amirkabir University of Tehran, Iran</i><br />
-  Cloud Computing Course Fall 2022-23<br />
-</p>
-
-<br />
-
 ## What is QEMU?
 
 **QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
