@@ -1,5 +1,11 @@
 # QEMU Presentation
 
+![GitHub top language](https://img.shields.io/github/languages/top/amirhnajafiz-presentations/qemu)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/amirhnajafiz-presentations/qemu)
+
+In this presentation I am going to talk about one of the most useful tools
+in virtualization technology.
+
 ## What is QEMU?
 
 **QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
