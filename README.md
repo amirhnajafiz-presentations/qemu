@@ -263,13 +263,12 @@ emulators mimic both hardware and software features.
 Clone into the presentation repository to access **QEMU** source codes:
 
 ```shell
-git clone https://github.com/amirhnajafiz/QEMU
+git https://github.com/qemu/qemu
 ```
 
 Go inside ```src``` directory and build **QEMU** by running the following commands:
 
 ```shell
-cd src
 ../configure
 make
 ```
@@ -283,7 +282,7 @@ chmod +x ./run.sh
 
 <br />
 
-## CPU Plugged test
+## Practical examples
 
 Let's go into [manual file](./Manual.md).
 
