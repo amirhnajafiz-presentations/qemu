@@ -65,6 +65,16 @@ It also aims to facilitate integration into higher level management layers, by p
 <br />
 <br />
 
+## QEMU vs KVM
+
+The key difference between QEMU and KVM is that QEMU is a software-based virtualization solution (type 2 hypervisor),
+while KVM is a hardware-based virtualization solution (type 1 hypervisor). 
+Unlike native QEMU, which uses emulation, KVM is a special operating mode of QEMU that uses CPU extensions (HVM) for virtualization via a kernel module.
+Using KVM, one can run multiple virtual machines running unmodified GNU/Linux, Windows, or any other operating system. 
+
+<br />
+<br />
+
 ## QEMU architecture
 
 Analysis of QEMU and KVM.
