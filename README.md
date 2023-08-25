@@ -1,3 +1,5 @@
+# QEMU Presentation
+
 ## What is QEMU?
 
 **QEMU** is a generic and open source machine & userspace _Emulator_ and _Virtualizer_.
@@ -20,7 +22,7 @@ With hypervisor support, **QEMU** can achieve near native performance for CPUs.
   
 <pre>
 Virtualization allows an organization to create multiple virtual machines—each with
-their own operating system (OS) and applications—on a single physical machine. 
+their own operating system (OS) and applications—on a single physical machine.
 A virtual machine can't interact directly with a physical computer, however.
 </pre>
   
@@ -62,7 +64,7 @@ It also aims to facilitate integration into higher level management layers, by p
 Analysis of QEMU and KVM.
 
 <p align="center">
-  <img src="assets/qemu/qemu-arch.jpg" alt="qemu-arch" width="500" />
+  <img src=".github/qemu/qemu-arch.jpg" alt="qemu-arch" width="500" />
 </p>
 
 ### Notes
@@ -142,7 +144,7 @@ In ```plugins``` directory there is a ```plugin.h``` file which contains data of
 <br />
 
 <p align="center">
-  <img src="assets/qemu/code-arch.jpeg" alt="qemu-code" width="500" />
+  <img src=".github/qemu/code-arch.jpeg" alt="qemu-code" width="500" />
 </p>
 
 <br />
